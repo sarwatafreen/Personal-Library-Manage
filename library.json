@@ -1,0 +1,36 @@
+[
+  {
+    "title":"Advanced Python Guide",
+    "author":"John Doe",
+    "publication_year":2019,
+    "genre":"Programming",
+    "read_status":"false,
+    "added_data":"2025-03-14 04:35:15"
+  },
+   {
+    "title":"Mastering Python",
+    "author":"Alice Johnson",
+    "publication_year":2011,
+    "genre":"Programming",
+    "read_status":"true,
+    "added_data":"2025-03-15 05:50:19"
+  },
+   {
+    "title":" Python for Beginners",
+    "author":" David Smith",
+    "publication_year":2022,
+    "genre":"Programming",
+    "read_status":"false,
+    "added_data":"2025-03-16 06:00:20"
+  },
+   {
+    "title":"Python Programming Essentials ",
+    "author": "Emma Williams",
+    "publication_year":2020,
+    "genre":"Programming",
+    "read_status":"true,
+    "added_data":"2025-03-17 07:56:40"
+  },
+]
+    
+  
