@@ -60,7 +60,8 @@ def add_book(title, author, publication_year, genre, read_status):
         'read_status': read_status,
         'added_date': datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
-      st.session_state.library.append(book)
+      # st.session_state.library.append(book)
+     st.session_state.library.append(book)  
     save_library()
     st.session_state.book_added = True
     time.sleep(0.6)  # Optional animation delay
