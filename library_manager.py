@@ -66,8 +66,8 @@ def add_book(title, author, publication_year, genre, read_status):
     save_library()
     st.session_state.book_added = True
     time.sleep(0.6)
-    # st.experimental_rerun()
-     st.rerun()
+    st.experimental_rerun()
+ 
 def remove_book(index):
     if 0 <= index < len(st.session_state.library):
         del st.session_state.library[index]
