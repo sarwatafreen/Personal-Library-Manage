@@ -60,11 +60,17 @@ def add_book(title, author, publication_year, genre, read_status):
         'read_status': read_status,
         'added_date': datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
-    st.session_state.library.append(book)
+      st.session_state.library.append(book)
     save_library()
     st.session_state.book_added = True
-    time.sleep(0.6)
-    st.experimental_rerun()
+    time.sleep(0.6)  # Optional animation delay
+    st.rerun()  # ✅ Correct usage
+
+    # st.session_state.library.append(book)
+    # save_library()
+    # st.session_state.book_added = True
+    # time.sleep(0.6)
+    # st.experimental_rerun()
 
 def remove_book(index):
     if 0 <= index < len(st.session_state.library):
@@ -159,10 +165,19 @@ if st.session_state.current_view == "add_book":
             author = st.text_input("Author", max_chars=100)
             publication_year = st.number_input("Publication Year", min_value=1000, max_value=datetime.datetime.now().year, step=1, value=2023)
         
-        with col2:
-            genre = st.selectbox("Genre", ["Fiction", "Non-Fiction", "Science", "Technology", "Fantasy", "Romance", "History", "Other"])
-            read_status = st.radio("Read Status", ["Read", "Unread"], horizontal=True)
-        
+        # with col2:
+        #     genre = st.selectbox("Genre", ["Fiction", "Non-Fiction", "Science", "Technology", "Fantasy", "Romance", "History", "Other"])
+        #     read_status = st.radio("Read Status", ["Read", "Unread"], horizontal=True)
+         with col2:
+        genre = st.selectbox("Genre", ["Fiction", "Non-Fiction", "Science", "Technology", "Fantasy", "Romance", "History", "Other"])
+        read_status = st.radio("Read Status", ["Read", "Unread"], horizontal=True)
+
+    submit_button = st.form_submit_button(label="Add Book")
+
+# ✅ Ensure this is properly indented and defined AFTER the form
+if submit_button and title and author:
+    add_book(title, author, publication_year, genre, read_status == "Read")
+    st.rerun()  # ✅ Use st.rerun() instead of st.experimental_rerun()
         submit_button = st.form_submit_button(label="Add Book")
         
         if submit_button and title and author:
