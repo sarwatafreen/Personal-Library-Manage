@@ -443,7 +443,7 @@ elif st.session_state.current_view == "stats":
 
 # Footer
 st.markdown("---")
- st.markdown("Copyright © 2025 Sarwat Afreen Personal Library Manager", unsafe_allow_html=True)
+ st.markdown("Copyright © 2025 SARWAT AFREEN Personal Library Manager", unsafe_allow_html=True)
 
 
 
