@@ -443,7 +443,10 @@ elif st.session_state.current_view == "stats":
 
 # Footer
 st.markdown("---")
- st.markdown("Copyright © 2025 SARWAT AFREEN Personal Library Manager", unsafe_allow_html=True)
+    if some_condition:
+        st.write("Hello")
+        st.markdown("Copyright © 2025 SARWAT AFREEN Personal Library Manager", unsafe_allow_html=True)  # Corrected indentation
+
 
 
 
